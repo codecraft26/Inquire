@@ -10,8 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inquire">
         <activity
-            android:name=".organisation.SelectionActivity"
+            android:name=".ChoosingActivity"
             android:exported="false" />
+        <activity
+            android:name=".organisation.OrganisationMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splashScreen.OrganisationSplashActivity"
+            android:exported="false" />
+
         <activity
             android:name=".splashScreen.SplashActivity"
             android:exported="true">
@@ -22,11 +29,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Login.IndividualLoginActivity"
+            android:name=".individual.login.IndividualLoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
