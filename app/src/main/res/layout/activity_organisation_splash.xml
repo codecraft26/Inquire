@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/communityanimation" />
+        app:lottie_rawRes="@raw/orgnew" />
 
     <TextView
         android:id="@+id/textView"
