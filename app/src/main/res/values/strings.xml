@@ -3,4 +3,8 @@
     <string name="login_activity">Login activity</string>
     <string name="splash_tag">Inquire !?</string>
     <string name="tagline">Inquire What You Require</string>
+    <string name="welocome">Welocome</string>
+    <string name="welcome">Welcome</string>
+    <string name="username">username</string>
+    <string name="login_with_facebook">Login With Facebook</string>
 </resources>
