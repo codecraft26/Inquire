@@ -4,38 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splashScreen.SplashActivity">
+    tools:context=".splashScreen.SplashActivity"
+    tools:ignore="ExtraText">
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="225dp"
-        android:layout_height="62dp"
-        android:fontFamily="@font/serif"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animation_view"
-        app:layout_constraintVertical_bias="0.233" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animation_view"
-        android:layout_width="269dp"
-        android:layout_height="249dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/splash_view"
+        android:layout_width="342dp"
+        android:layout_height="297dp"
+        android:layout_marginTop="240dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.257"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/splashanimation" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="173dp"
+        android:layout_height="50dp"
+        android:text="@string/splash_tag"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/splash_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
