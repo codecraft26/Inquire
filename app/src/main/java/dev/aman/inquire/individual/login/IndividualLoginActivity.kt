@@ -1,4 +1,4 @@
-package dev.aman.inquire.Login
+package dev.aman.inquire.individual.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,13 +8,12 @@ import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import dev.aman.inquire.MainActivity
-import dev.aman.inquire.R
-import dev.aman.inquire.databinding.ActivityLoginBinding
+import dev.aman.inquire.databinding.ActivityLoginIndividualBinding
 
-class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+class IndividualLoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginIndividualBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding= ActivityLoginBinding.inflate(layoutInflater)
+        binding= ActivityLoginIndividualBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.signInButton.setOnClickListener{
@@ -34,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
 
-            val intent= Intent(this@LoginActivity, MainActivity::class.java)
+            val intent= Intent(this@IndividualLoginActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         } else {
