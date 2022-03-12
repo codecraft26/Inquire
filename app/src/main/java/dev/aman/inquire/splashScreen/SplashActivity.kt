@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
             val mIntent = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(mIntent)
             finish()
-        }, 2000)
+        }, 9000)
 
     }
 }
