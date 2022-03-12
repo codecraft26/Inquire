@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Inquire</string>
+    <string name="login_activity">Login activity</string>
 </resources>
