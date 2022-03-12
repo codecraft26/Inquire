@@ -19,6 +19,7 @@ class IndividualLoginActivity : AppCompatActivity() {
         binding.signInButton.setOnClickListener{
             signInLauncher.launch(signInIntent)
         }
+
     }
     private val signInLauncher = registerForActivityResult(
         FirebaseAuthUIActivityResultContract()
