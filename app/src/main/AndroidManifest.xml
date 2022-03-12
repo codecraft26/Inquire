@@ -10,22 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inquire">
         <activity
+            android:name=".organisation.SelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".splashScreen.SplashActivity"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".Login.IndividualLoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

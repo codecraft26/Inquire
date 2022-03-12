@@ -7,4 +7,6 @@
     <string name="welcome">Welcome</string>
     <string name="username">username</string>
     <string name="login_with_facebook">Login With Facebook</string>
+    <string name="organisation">ORGANISATION</string>
+    <string name="individual">Individual</string>
 </resources>
