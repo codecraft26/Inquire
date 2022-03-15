@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import dev.aman.inquire.R
 import dev.aman.inquire.databinding.ActivityOrganisationMainBinding
 import dev.aman.inquire.databinding.ActivityOrganisationSplashBinding
+// this activity for refencing that it is aorgniastaion activity
 
 class OrganisationMainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOrganisationMainBinding
