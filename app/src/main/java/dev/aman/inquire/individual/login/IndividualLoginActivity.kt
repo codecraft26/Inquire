@@ -28,7 +28,7 @@ class IndividualLoginActivity : AppCompatActivity() {
     }
     private val signInIntent = AuthUI.getInstance()
         .createSignInIntentBuilder()
-        .setAvailableProviders(listOf(AuthUI.IdpConfig.GoogleBuilder().build()))
+        .setAvailableProviders(listOf(AuthUI.IdpConfig.GoogleBuilder().build())) // choosing only auth for google
         .build()
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
