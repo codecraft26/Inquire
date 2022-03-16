@@ -17,6 +17,7 @@ class IndividualLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.signInButton.setOnClickListener{
+            // line code for opening a signin intent of google
             signInLauncher.launch(signInIntent)
         }
     }
