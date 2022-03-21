@@ -13,6 +13,7 @@ class OrganisationMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityOrganisationMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // orgnanisation Activity
 
     }
 }
