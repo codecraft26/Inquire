@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inquire">
         <activity
+            android:name=".individual.IndividualMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChoosingActivity"
             android:exported="false" />
         <activity
@@ -18,7 +21,6 @@
         <activity
             android:name=".splashScreen.OrganisationSplashActivity"
             android:exported="false" />
-
         <activity
             android:name=".splashScreen.SplashActivity"
             android:exported="true">

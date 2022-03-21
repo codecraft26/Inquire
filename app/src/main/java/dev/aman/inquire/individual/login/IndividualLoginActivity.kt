@@ -20,6 +20,7 @@ class IndividualLoginActivity : AppCompatActivity() {
             // line code for opening a signin intent of google
             signInLauncher.launch(signInIntent)
         }
+
     }
     private val signInLauncher = registerForActivityResult(
         FirebaseAuthUIActivityResultContract()
