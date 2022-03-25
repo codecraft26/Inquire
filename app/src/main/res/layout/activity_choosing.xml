@@ -31,7 +31,10 @@
         android:text="@string/organisation"
         app:layout_constraintBottom_toTopOf="@+id/indivdual_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="28dp"
+
+        />
 
     <Button
         android:id="@+id/indivdual_btn"
@@ -41,5 +44,6 @@
         android:text="@string/individual"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="28dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
