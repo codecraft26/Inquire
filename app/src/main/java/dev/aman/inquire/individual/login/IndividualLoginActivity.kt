@@ -9,7 +9,6 @@ import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import dev.aman.inquire.MainActivity
 import dev.aman.inquire.databinding.ActivityLoginIndividualBinding
-
 class IndividualLoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginIndividualBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +16,7 @@ class IndividualLoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.signInButton.setOnClickListener{
-            // line code for opening a signin intent of google
+
             signInLauncher.launch(signInIntent)
         }
 
