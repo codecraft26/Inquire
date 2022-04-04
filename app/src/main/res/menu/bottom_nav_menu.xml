@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/home" android:icon="@drawable/ic_baseline_home_24" android:id="@+id/homeFragment" />
+    <item android:title="@string/add" android:icon="@drawable/ic_baseline_add_circle_24" android:id="@+id/createFragment" />
+    <item android:title="@string/bookmarked" android:icon="@drawable/ic_bookmark" android:id="@+id/bookmarkedFragment" />
+</menu>
