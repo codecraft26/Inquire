@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+
+    >
+<group>
+    <item android:title="Profile"
+        android:icon="@drawable/usericon"
+        android:id="@+id/profileFragment" />
+    <item android:title="My Drafts"
+        android:icon="@drawable/ic_draft"
+        android:id="@+id/mydraftFragment"/>
+    <item android:title="About"
+        android:icon="@drawable/ic_about"
+        android:id="@+id/aboutFragment" />
+    <item
+        android:title="Profile"
+        android:id="@+id/settingFragments">
+        <menu>
+                <item android:title="login"
+                    android:id="@+id/loginFragment" />
+
+        </menu>
+    </item>
+</group>
+</menu>

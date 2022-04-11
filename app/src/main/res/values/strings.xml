@@ -24,4 +24,10 @@
     <string name="search">Search</string>
     <string name="saved" />
     <string name="bookmarked">BookMarked</string>
+    <string name="sample_user_name">amann.deb</string>
+    <string name="sample_user_email">gaman0221@gmail.com</string>
+    <string name="sample_user_bio">" i m cpomuter science undergrad of Babu banarasi das engineering college lucknow expert in android devl as well as webd"</string>
+    <string name="email">gaman0221@gmail.com</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>
