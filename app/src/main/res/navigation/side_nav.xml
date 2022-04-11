@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/side_nav"
+    tools:ignore="InvalidNavigation"
+    app:startDestination="@id/myDraftFragment">
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="dev.aman.inquire.individual.ui.profile.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/myDraftFragment"
+        android:name="dev.aman.inquire.MyDraftFragment"
+        android:label="fragment_my_draft"
+        tools:layout="@layout/fragment_my_draft" />
+    <fragment
+        android:id="@+id/aboutFragment2"
+        android:name="dev.aman.inquire.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+
+</navigation>

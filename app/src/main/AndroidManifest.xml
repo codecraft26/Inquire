@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Inquire">
+        <activity
+            android:name=".individual.ui.NavsideActivity"
+            android:exported="false" />
 
         <activity
             android:name=".individual.IndividualMainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,9 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".splashScreen.SplashActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".individual.login.IndividualLoginActivity"
             android:exported="false" />

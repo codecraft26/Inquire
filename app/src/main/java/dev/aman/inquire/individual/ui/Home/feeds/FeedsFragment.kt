@@ -1,24 +1,23 @@
-package dev.aman.inquire.individual.ui.create
+package dev.aman.inquire.individual.ui.Home.feeds
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dev.aman.inquire.databinding.FragmentCreateBinding
+import dev.aman.inquire.R
 
 
-class CreateFragment : Fragment() {
-    private lateinit var binding: FragmentCreateBinding
+class FeedsFragment : Fragment() {
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentCreateBinding.inflate(inflater, container, false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_feeds, container, false)
     }
 
 
-
-}
+    }

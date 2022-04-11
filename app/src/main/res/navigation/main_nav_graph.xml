@@ -20,4 +20,5 @@
         android:name="dev.aman.inquire.individual.ui.bookmarked.BookmarkedFragment"
         android:label="fragment_bookmarked"
         tools:layout="@layout/fragment_bookmarked" />
+
 </navigation>
