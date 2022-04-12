@@ -7,7 +7,7 @@
     android:id="@+id/aman"
     tools:context=".individual.IndividualMainActivity">
 
-    
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navView"
@@ -22,7 +22,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="0dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/main_nav_graph" />
 

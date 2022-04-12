@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".individual.ui.Home.HomeFragment">
+    tools:context=".individual.ui.home.HomeFragment">
 
 
-    <com.google.android.material.tabs.TabLayout
+<com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

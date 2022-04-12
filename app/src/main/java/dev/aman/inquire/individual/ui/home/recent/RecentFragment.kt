@@ -1,4 +1,4 @@
-package dev.aman.inquire.individual.ui.Home.articles
+package dev.aman.inquire.individual.ui.home.recent
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,17 +8,23 @@ import android.view.ViewGroup
 import dev.aman.inquire.R
 
 
-class ArticlesFragment : Fragment() {
+
+
+class RecentFragment : Fragment() {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_articles, container, false)
+        return inflater.inflate(R.layout.fragment_recent, container, false)
     }
-
-
-
 
 }

@@ -31,12 +31,13 @@
         <entry key="app/src/main/res/layout/fragment_bookmarked.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_create.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.15260416666666668" />
-        <entry key="app/src/main/res/layout/fragment_feeds.xml" value="0.1375" />
+        <entry key="app/src/main/res/layout/fragment_feeds.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_my_draft.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_recent.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/header_navigation_drawer.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/layout_inquire.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_nav_ind.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />

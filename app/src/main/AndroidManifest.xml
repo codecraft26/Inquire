@@ -8,10 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.Inquire">
-        <activity
-            android:name=".individual.ui.NavsideActivity"
-            android:exported="false" />
+
 
         <activity
             android:name=".individual.IndividualMainActivity"
@@ -21,6 +20,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".ChoosingActivity"
@@ -33,7 +33,9 @@
             android:exported="false" />
         <activity
             android:name=".splashScreen.SplashActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".individual.login.IndividualLoginActivity"
             android:exported="false" />
