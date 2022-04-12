@@ -15,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 import dev.aman.inquire.R
+import dev.aman.inquire.individual.data.Repository
 import dev.aman.inquire.individual.ui.bookmarked.BookmarkedFragment
 import dev.aman.inquire.individual.ui.create.CreateFragment
 import dev.aman.inquire.individual.ui.Home.HomeFragment
@@ -25,6 +26,8 @@ class IndividualMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_individual_main)
+
+
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,
             HomeFragment()
         ).commit()

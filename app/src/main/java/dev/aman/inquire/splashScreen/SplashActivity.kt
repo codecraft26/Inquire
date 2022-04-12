@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
                 val mIntent = Intent(this@SplashActivity, IndividualMainActivity::class.java)
                 startActivity(mIntent)
                 finish()
-            }, 3000)
+            }, 6000)
         }
         else{
             val mIntent = Intent(this@SplashActivity, ChoosingActivity::class.java)
