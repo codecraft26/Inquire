@@ -5,7 +5,12 @@ import androidx.annotation.StringRes
 
 
 data   class Inquire(
-     val stringResourceId: String="",
-   val descriptionResourceId: String="",
-    @DrawableRes val imageResourceId: Int
+    val id: String,
+    val title: String,
+    val language: String,
+    val description: String,
+    val tags: List<String>,
+    val imageUrl: String?,
+    val code: String?
+
  )
