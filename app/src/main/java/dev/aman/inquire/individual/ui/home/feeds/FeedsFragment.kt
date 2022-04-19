@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
 import dev.aman.inquire.databinding.FragmentFeedsBinding
-import dev.aman.inquire.individual.data.DataSource
-import dev.aman.inquire.individual.ui.home.HomeAdapter
 
 
 class FeedsFragment : Fragment() {
@@ -24,10 +21,7 @@ class FeedsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.feedsRecyclerView.layoutManager=LinearLayoutManager(context)
-        val mydataset= DataSource().getData()
-        val recyclerView=binding.feedsRecyclerView
-        recyclerView.adapter= HomeAdapter(this,mydataset)
+
 
 
     }

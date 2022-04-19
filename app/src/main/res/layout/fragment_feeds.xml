@@ -7,14 +7,12 @@
     tools:context=".individual.ui.home.feeds.FeedsFragment">
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/feeds_recycler_view"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:text="feeds fragement "
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/layout_inquire"
-        />
+        tools:layout_editor_absoluteX="-42dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
