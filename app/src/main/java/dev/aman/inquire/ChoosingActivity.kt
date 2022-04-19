@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dev.aman.inquire.databinding.ActivityChoosingBinding
-import dev.aman.inquire.individual.login.IndividualLoginActivity
+import dev.aman.inquire.individual.ui.login.IndividualLoginActivity
 import dev.aman.inquire.splashScreen.OrganisationSplashActivity
 
 class ChoosingActivity : AppCompatActivity() {

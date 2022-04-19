@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".individual.login.IndividualLoginActivity"
+    tools:context=".individual.ui.login.IndividualLoginActivity"
     >
 
     <com.airbnb.lottie.LottieAnimationView

@@ -1,4 +1,4 @@
-package dev.aman.inquire.individual.login
+package dev.aman.inquire.individual.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,6 @@ import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
-import dev.aman.inquire.MainActivity
 import dev.aman.inquire.databinding.ActivityLoginIndividualBinding
 import dev.aman.inquire.individual.IndividualMainActivity
 import dev.aman.inquire.individual.data.Repository

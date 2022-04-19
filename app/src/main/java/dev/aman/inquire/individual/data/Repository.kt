@@ -16,14 +16,17 @@ object Repository {
     fun saveUser() {
         var id = ""
         var name = ""
-        var photoUrl = ""
+        var email =""
+        var username= ""
+
         Firebase.auth.currentUser?.let {
             id = it.uid
             name = it.displayName ?: ""
-            photoUrl = it.photoUrl?.toString() ?: ""
+            email = it.email ?: ""
+            username=""
         }
 
-        val user = User(id,name, photoUrl)
+        val user = User(id,username,name,email)
         Firebase
             .firestore
             .collection("users")
