@@ -26,7 +26,7 @@
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_add.xml" value="0.15260416666666668" />
-        <entry key="app/src/main/res/layout/fragment_add_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_add_details.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_adddetails.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_articles.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_bookmarked.xml" value="0.15260416666666668" />
