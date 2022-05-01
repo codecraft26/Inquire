@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -61,6 +62,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     //firebase firestore dependencies
     implementation 'com.google.firebase:firebase-firestore-ktx'
+// DI
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
+    // Image handling
+    implementation "io.coil-kt:coil:1.4.0"
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
 
 
 }
