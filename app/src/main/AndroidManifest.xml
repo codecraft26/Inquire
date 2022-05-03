@@ -15,11 +15,7 @@
         <activity
             android:name=".individual.IndividualMainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ChoosingActivity"
@@ -32,7 +28,13 @@
             android:exported="false" />
         <activity
             android:name=".splashScreen.SplashActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".individual.ui.login.IndividualLoginActivity"
             android:exported="false" />
