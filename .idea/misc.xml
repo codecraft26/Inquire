@@ -11,7 +11,7 @@
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/activity_choosing.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_individual_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_individual_main.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.15052083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -41,7 +41,7 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_recent.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/header_navigation_drawer.xml" value="0.15260416666666668" />
-        <entry key="app/src/main/res/layout/layout_inquire.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/layout_inquire.xml" value="0.1" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_nav_ind.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
