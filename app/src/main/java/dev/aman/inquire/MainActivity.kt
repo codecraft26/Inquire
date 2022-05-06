@@ -1,5 +1,5 @@
 package dev.aman.inquire
-
+//Main activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 //Main activity
