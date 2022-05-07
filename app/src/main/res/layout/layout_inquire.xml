@@ -102,36 +102,33 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="17dp"
             android:text="hey there  i am aman wlcome to inquire app that build on the app on the surfce how to buld some"
-            android:textSize="16dp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inquire_title" />
 
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/like_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inquire_image"
+            app:sparkbutton_activeImage="@drawable/ic_baseline_thumb_up_24"
+            app:sparkbutton_iconSize="40dp"
+            app:sparkbutton_inActiveImage="@drawable/img_1"
+            app:sparkbutton_primaryColor="@color/pink"
+            app:sparkbutton_secondaryColor="@color/black" />
 
-        <com.sackcentury.shinebuttonlib.ShineButton
-            android:id="@+id/po_image1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:src="@android:color/darker_gray"
-            app:allow_random_color="false"
-            app:big_shine_color="#FF6666"
-            app:btn_color="@android:color/darker_gray"
-            app:btn_fill_color="#FF6666"
-            app:click_animation_duration="200"
-            app:enable_flashing="false"
-            app:shine_animation_duration="1500"
-            app:shine_count="8"
-            app:shine_distance_multiple="1.5f"
-            app:shine_turn_angle="10"
-            app:siShape="circle"
-            app:small_shine_color="#CC9999"
-            app:small_shine_offset_angle="20"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="421dp"
 
-            />
+
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

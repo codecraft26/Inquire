@@ -2,6 +2,7 @@ package dev.aman.inquire.individual
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -41,5 +42,7 @@ class IndividualMainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,currentFragment).commit()
         true
     }
+
+
 
 }
