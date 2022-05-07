@@ -9,7 +9,6 @@ import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import dev.aman.inquire.databinding.ActivityLoginIndividualBinding
 import dev.aman.inquire.individual.IndividualMainActivity
-import dev.aman.inquire.individual.data.Repository
 
 class IndividualLoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginIndividualBinding
@@ -35,7 +34,6 @@ class IndividualLoginActivity : AppCompatActivity() {
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
-                    Repository.saveUser()
             val intent= Intent(this@IndividualLoginActivity, IndividualMainActivity::class.java)
             startActivity(intent)
             finish()

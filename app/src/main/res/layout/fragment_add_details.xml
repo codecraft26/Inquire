@@ -23,24 +23,29 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField_snippet_title"
-        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:hint="Snippet Title"
+        android:hint="Inquire Title"
+        app:startIconDrawable="@drawable/ic_inquire_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
       <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
-          android:layout_height="match_parent" />
+          android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField_snippet_tags"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="Language*"
+        app:startIconDrawable="@drawable/ic_baseline_language_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_margin="8dp"
         app:endIconMode="none"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,17 +60,20 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField_snippet_description"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:layout_marginTop="20dp"
-        android:hint="Snippet Description"
+        android:hint="Inquire Description"
+        app:startIconDrawable="@drawable/ic_baseline_description_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textField_snippet_tags">
 
       <com.google.android.material.textfield.TextInputEditText
+          style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox.Dense"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:gravity="top|start"

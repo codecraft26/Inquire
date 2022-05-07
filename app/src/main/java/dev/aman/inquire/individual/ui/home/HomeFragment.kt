@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
             tab.text = when (position) {
                 0 -> "Feeds"
                 1 -> "Article"
-                2->"Recents"
+                2->"Bookmarked"
                 else -> "NA"
             }
         }.attach()
