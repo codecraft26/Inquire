@@ -1,6 +1,9 @@
+/*
 package dev.aman.inquire.individual.ui.home.feeds
 
-import android.content.Context
+*/
+package dev.aman.inquire.individual.ui.home.feeds
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import dev.aman.inquire.R
-import dev.aman.inquire.individual.data.Inquire
+import dev.aman.inquire.individual.model.Inquire
 
 class FeedsAdapter(
     private val context: FeedsFragment,
@@ -17,10 +20,9 @@ class FeedsAdapter(
 
 
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
-        val title: TextView = view.findViewById(R.id.textView_title)
-        val description: TextView = view.findViewById(R.id.textView_description)
-        val image: ImageView = view.findViewById(R.id.imageView_output)
-        val profileImage:ImageView=view.findViewById(R.id.imageView_profile)
+        val title: TextView = view.findViewById(R.id.inquire_title)
+        val description: TextView = view.findViewById(R.id.inquire_description)
+        val image: ImageView = view.findViewById(R.id.inquire_image)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         // create a new view
@@ -33,9 +35,8 @@ class FeedsAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
         holder.title.text = item.title
-        holder.image.setImageResource(item.image)
         holder.description.text = item.description
-        holder.profileImage.setImageResource(item.profile)
+        holder.image.setImageResource(item.profile)
 
     }
 
@@ -44,3 +45,4 @@ class FeedsAdapter(
     }
 
 }
+

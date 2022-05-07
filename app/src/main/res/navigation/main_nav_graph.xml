@@ -16,8 +16,8 @@
         android:label="fragment_create"
         tools:layout="@layout/fragment_create" />
     <fragment
-        android:id="@+id/bookmarkedFragment"
-        android:name="dev.aman.inquire.individual.ui.bookmarked.BookmarkedFragment"
+        android:id="@+id/accountFragment"
+        android:name="dev.aman.inquire.individual.ui.profile.AccountFragment"
         android:label="fragment_bookmarked"
         tools:layout="@layout/fragment_bookmarked" />
 

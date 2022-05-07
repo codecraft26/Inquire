@@ -7,9 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="snippet_button_like">#FF0000</color>
-    <color name="snippet_button_like_clicked">#FF0000</color>
-    <color name="color_unlike" >  #FFFFFF</color>
-    <color name="inquire_button_bookmark">#FFFAFA</color>
-    <color name="inquire_button_bookmark_clicked">#F11F0F</color>
+
+
 </resources>

@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/button_round.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.154" />
+        <entry key="app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/usericon.xml" value="0.154" />
@@ -31,17 +32,18 @@
         <entry key="app/src/main/res/layout/fragment_add_image.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_adddetails.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_articles.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/fragment_book_marked.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_bookmarked.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_create.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.15260416666666668" />
-        <entry key="app/src/main/res/layout/fragment_feeds.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_feeds.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_input_code_dialog.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_my_draft.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_recent.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/header_navigation_drawer.xml" value="0.15260416666666668" />
-        <entry key="app/src/main/res/layout/layout_inquire.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_inquire.xml" value="0.22" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_nav_ind.xml" value="0.33" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
