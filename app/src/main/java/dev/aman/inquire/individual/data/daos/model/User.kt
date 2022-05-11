@@ -1,4 +1,4 @@
-package dev.aman.inquire.individual.model
+package dev.aman.inquire.individual.data.daos.model
 
 import androidx.room.PrimaryKey
 

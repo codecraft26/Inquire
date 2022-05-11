@@ -9,15 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.activityViewModels
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.github.dhaval2404.imagepicker.ImagePicker.Companion.REQUEST_CODE
 import dev.aman.inquire.databinding.FragmentAddImageBinding
+import dev.aman.inquire.individual.data.daos.InquireDao
 import dev.aman.inquire.individual.ui.create.CreateFragment
 
 
 class AddImageFragment : Fragment() {
     private lateinit var binding: FragmentAddImageBinding
-
+    private val model by activityViewModels<InquireDao>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -38,7 +40,10 @@ class AddImageFragment : Fragment() {
             val data = result.data
 
             if (resultCode == Activity.RESULT_OK) {
-                val imageUri = data?.data
+                val imageUri = data?.data!!
+                model.image_uri=imageUri
+
+
                 binding.imageViewResult.setImageURI(imageUri)
                 Toast.makeText(context, "Image Selected", Toast.LENGTH_SHORT).show()
                 if (resultCode == Activity.RESULT_CANCELED) {
@@ -49,6 +54,8 @@ class AddImageFragment : Fragment() {
                 }
             }
         }
+
+
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

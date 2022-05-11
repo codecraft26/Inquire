@@ -22,7 +22,7 @@ class AddDetailsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }

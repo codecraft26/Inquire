@@ -83,6 +83,9 @@ dependencies {
 
     // Buttons with Shine Effect for Bookmarking
         implementation 'com.github.varunest:sparkbutton:1.0.6'
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
+    //firbase storage
+    implementation 'com.google.firebase:firebase-storage'
 
 
 }
