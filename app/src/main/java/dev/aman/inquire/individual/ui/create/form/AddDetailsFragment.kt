@@ -4,15 +4,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import dev.aman.inquire.databinding.FragmentAddDetailsBinding
+import dev.aman.inquire.individual.data.daos.InquireDao
 import dev.aman.inquire.individual.ui.create.CreateFragment
+import dev.aman.inquire.utils.Constants
 
 
 class AddDetailsFragment : Fragment() {
     private lateinit var binding: FragmentAddDetailsBinding
+    private val model by activityViewModels<InquireDao>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,6 +39,8 @@ class AddDetailsFragment : Fragment() {
             } else {
                 null
             }
+            model.title= text.toString()
+
         }
 
         binding.textFieldSnippetDescription.editText?.doOnTextChanged { text, _, _, _ ->
@@ -41,6 +49,7 @@ class AddDetailsFragment : Fragment() {
             } else {
                 null
             }
+            model.description= text.toString()
 
         }
 
@@ -51,7 +60,12 @@ class AddDetailsFragment : Fragment() {
             } else {
                 null
             }
+            model.language= text.toString()
         }
+
+
+
+
         binding.addDetailsButtonNext.setOnClickListener{
            if (binding.textFieldSnippetTitle.editText?.text.isNullOrBlank() ||
                binding.textFieldSnippetDescription.editText?.text.isNullOrBlank() ||

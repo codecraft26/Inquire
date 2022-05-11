@@ -1,28 +1,21 @@
 package dev.aman.inquire.individual.model
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
-import dev.aman.inquire.individual.model.User
-import java.sql.Timestamp
+import android.net.Uri
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentSnapshot
+import dev.aman.inquire.utils.InquireState
 
-/*
 data class Inquire(
-    val id : Int,
+    var id: Int = 0,
     val title:String="",
     val description:String="",
-    val upVotes:Int=0,  // number of upvotes
-    val  language:String="",
-    val timestamp:Long=0,
-    val createdBy:User,
-    val imageUri:String="",
+    val inquire_code:String="",
+    val language:String="",
+    val timestamp: String? = null,
+    val createdBy: Task<DocumentSnapshot>? = null,
+    val imageUri: Uri? = null,
+    var status: InquireState = InquireState.UnBookmarked,
+    var UpVotes:Int=0,
 
-)
-*/
-data class Inquire(
-    val title: String,
-    val description: String,
-    //drawable
-    @DrawableRes val image: Int,
-    @DrawableRes val profile: Int
-)
+    )
 
