@@ -1,7 +1,8 @@
-/*
+package dev.aman.inquire.individual.ui.home.feeds/*
 package dev.aman.inquire.individual.ui.home.feeds
 
-*/
+*//*
+
 package dev.aman.inquire.individual.ui.home.feeds
 
 import android.view.LayoutInflater
@@ -46,3 +47,4 @@ class FeedsAdapter(
 
 }
 
+*/
