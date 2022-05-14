@@ -1,7 +1,6 @@
-package dev.aman.inquire.individual.model
+package dev.aman.inquire.individual.data.model
 
 import android.net.Uri
-import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentSnapshot
 import dev.aman.inquire.utils.InquireState
 
@@ -12,10 +11,9 @@ data class Inquire(
     val inquire_code:String="",
     val language:String="",
     val timestamp: String? = null,
-    val createdBy: Task<DocumentSnapshot>? = null,
+    /*val createdBy: Task<DocumentSnapshot>? = null,*/
     val imageUri: Uri? = null,
     var status: InquireState = InquireState.UnBookmarked,
     var UpVotes:Int=0,
 
     )
-

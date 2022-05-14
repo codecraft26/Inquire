@@ -1,8 +1,6 @@
 package dev.aman.inquire.individual.ui.create.form
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,30 +9,24 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResultListener
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.google.modernstorage.permissions.RequestAccess
 import com.google.modernstorage.permissions.StoragePermissions
 import com.google.modernstorage.storage.AndroidFileSystem
 import com.google.modernstorage.storage.toOkioPath
-import dev.aman.inquire.MainActivity
-import dev.aman.inquire.R
 import dev.aman.inquire.databinding.FragmentAddCodeBinding
-import dev.aman.inquire.individual.IndividualMainActivity
-import dev.aman.inquire.individual.data.daos.InquireDao
+import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.InputCodeDialogFragment
 import dev.aman.inquire.utils.Constants
-import io.github.kbiakov.codeview.highlight.ColorTheme
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import okio.Options
+
+
 import okio.buffer
 
 
 class AddCodeFragment : Fragment() {
 
 private lateinit var binding:FragmentAddCodeBinding
-    private val model by activityViewModels<InquireDao>()
+    private val model by activityViewModels<InquireViewModel>()
     private lateinit var fileSystem: AndroidFileSystem
 
     private val requestFile =
@@ -60,7 +52,7 @@ private lateinit var binding:FragmentAddCodeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
      binding= FragmentAddCodeBinding.inflate(inflater,container,false)
         return binding.root
@@ -72,12 +64,15 @@ private lateinit var binding:FragmentAddCodeBinding
         fileSystem = AndroidFileSystem(requireContext())
         setFragmentResultListener(Constants.KEY_INPUT_CODE_DIALOG) { _, bundle ->
             val code = bundle.getString(Constants.KEY_CODE)
-          model.inquire_code = code!!
+            if (code != null) {
+                model.inquire_code = code
+            }
             binding.codeViewSnippetCode.apply {
 
 
-
+                if (code != null) {
                     setCode(code)
+                }
 
 
             }
@@ -97,12 +92,9 @@ private lateinit var binding:FragmentAddCodeBinding
                 )
             )
         }
-       binding.publishButton.setOnClickListener{
-          model.publishInquire()
-           Intent(requireContext(), IndividualMainActivity::class.java).also {
-               startActivity(it)
-           }
-
+       binding.publishButton.setOnClickListener {
+        model.publishInquire()
+       }
        }
 
 
@@ -110,4 +102,3 @@ private lateinit var binding:FragmentAddCodeBinding
         }
 
 
-}

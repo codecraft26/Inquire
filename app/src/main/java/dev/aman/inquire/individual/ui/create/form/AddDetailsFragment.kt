@@ -4,25 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
+
 import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import dev.aman.inquire.databinding.FragmentAddDetailsBinding
-import dev.aman.inquire.individual.data.daos.InquireDao
+import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.CreateFragment
-import dev.aman.inquire.utils.Constants
 
 
 class AddDetailsFragment : Fragment() {
     private lateinit var binding: FragmentAddDetailsBinding
-    private val model by activityViewModels<InquireDao>()
+    private val model by activityViewModels<InquireViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
