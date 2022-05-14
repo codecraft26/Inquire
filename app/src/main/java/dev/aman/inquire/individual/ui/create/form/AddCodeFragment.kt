@@ -15,11 +15,10 @@ import com.google.modernstorage.permissions.StoragePermissions
 import com.google.modernstorage.storage.AndroidFileSystem
 import com.google.modernstorage.storage.toOkioPath
 import dev.aman.inquire.databinding.FragmentAddCodeBinding
-import dev.aman.inquire.individual.data.daos.InquireDao
+import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.InputCodeDialogFragment
 import dev.aman.inquire.utils.Constants
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+
 
 import okio.buffer
 
@@ -27,13 +26,13 @@ import okio.buffer
 class AddCodeFragment : Fragment() {
 
 private lateinit var binding:FragmentAddCodeBinding
-    private val model by activityViewModels<InquireDao>()
+    private val model by activityViewModels<InquireViewModel>()
     private lateinit var fileSystem: AndroidFileSystem
 
     private val requestFile =
         registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
             if (uri != null) {
-                model.inquireCode = fileSystem.source(uri.toOkioPath()).buffer().readUtf8().also {
+                model.inquire_code = fileSystem.source(uri.toOkioPath()).buffer().readUtf8().also {
                     binding.codeViewSnippetCode.apply {
 
                         setCode(it)
@@ -66,7 +65,7 @@ private lateinit var binding:FragmentAddCodeBinding
         setFragmentResultListener(Constants.KEY_INPUT_CODE_DIALOG) { _, bundle ->
             val code = bundle.getString(Constants.KEY_CODE)
             if (code != null) {
-                model.inquireCode = code
+                model.inquire_code = code
             }
             binding.codeViewSnippetCode.apply {
 
