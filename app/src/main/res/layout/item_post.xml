@@ -24,11 +24,13 @@
             android:layout_width="43dp"
             android:layout_height="42dp"
             android:layout_marginStart="16dp"
+            android:clickable="true"
             android:layout_marginTop="16dp"
             android:contentDescription="TODO"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/usericon" />
+            app:srcCompat="@drawable/usericon"
+            android:focusable="true" />
 
         <TextView
             android:id="@+id/user_name"
