@@ -11,12 +11,13 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/usericon.xml" value="0.154" />
+        <entry key="app/src/main/res/layout/activity_account_update.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/activity_choosing.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_individual_main.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.15052083333333333" />
+        <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_navside.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.12" />
@@ -27,7 +28,8 @@
         <entry key="app/src/main/res/layout/activity_selection.xml" value="0.15052083333333333" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/fragment_account_update.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_add.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_add_code.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_add_details.xml" value="0.33" />

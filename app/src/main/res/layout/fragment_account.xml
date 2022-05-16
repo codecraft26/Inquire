@@ -7,7 +7,7 @@
     tools:context=".individual.ui.profile.AccountFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <ImageView
@@ -15,10 +15,11 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_marginTop="32dp"
+            android:src="@drawable/usericon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_baseline_thumb_up_24" />
+             />
 
         <TextView
             android:id="@+id/textView_user_name"
@@ -146,26 +147,78 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
 
-            app:layout_constraintBottom_toBottomOf="@+id/textView_version_name"
+            android:layout_marginTop="376dp"
+            android:layout_marginEnd="387dp"
+            android:layout_marginBottom="143dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView_version_name" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView_version_name"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-
-            android:text="Version 1.0.0"
-            android:textSize="14sp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="64dp"
+            android:clickable="true"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:backgroundTint="#F6F4F4"
+            app:layout_constraintBottom_toTopOf="@+id/chipGroup_scrollview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView_user_bio" />
+            app:layout_constraintStart_toEndOf="@+id/imageView_user_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="61dp"
+            android:src="@drawable/fui_ic_github_white_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:clickable="true"
+
+
+            android:id="@+id/github_link"
+            android:layout_width="332dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="103dp"
+            android:text="github_link"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView_user_bio"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="159dp"
+            android:text="LogOut"
+            android:drawableLeft="@drawable/ic_baseline_login_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/github_link" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
 
