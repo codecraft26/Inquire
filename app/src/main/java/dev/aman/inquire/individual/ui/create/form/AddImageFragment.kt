@@ -13,13 +13,13 @@ import androidx.fragment.app.activityViewModels
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.github.dhaval2404.imagepicker.ImagePicker.Companion.REQUEST_CODE
 import dev.aman.inquire.databinding.FragmentAddImageBinding
-import dev.aman.inquire.individual.data.daos.InquireDao
+import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.CreateFragment
 
 
 class AddImageFragment : Fragment() {
     private lateinit var binding: FragmentAddImageBinding
-    private val model by activityViewModels<InquireDao>()
+    private val model by activityViewModels<InquireViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,7 +42,7 @@ class AddImageFragment : Fragment() {
             if (resultCode == Activity.RESULT_OK) {
                 val imageUri = data?.data!!
                 model.image_uri=imageUri
-
+                model.imageUpload()
 
                 binding.imageViewResult.setImageURI(imageUri)
                 Toast.makeText(context, "Image Selected", Toast.LENGTH_SHORT).show()

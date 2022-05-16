@@ -9,8 +9,6 @@ import dev.aman.inquire.R
 
 
 class BookMarkedFragment : Fragment() {
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
