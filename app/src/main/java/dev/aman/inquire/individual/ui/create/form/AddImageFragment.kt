@@ -41,7 +41,7 @@ class AddImageFragment : Fragment() {
 
             if (resultCode == Activity.RESULT_OK) {
                 val imageUri = data?.data!!
-                model.image_uri=imageUri
+
                 model.imageUpload()
 
                 binding.imageViewResult.setImageURI(imageUri)

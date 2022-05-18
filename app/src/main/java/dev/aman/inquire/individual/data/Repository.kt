@@ -11,17 +11,7 @@ object Repository {
 
     val success = MutableLiveData<Boolean>()
     val error = MutableLiveData<String>()
-  /*  private val user: FirebaseUser = Firebase.auth.currentUser!!
-    private val userCollection = Firebase.firestore.collection("users")
-    private  val auth= Firebase.auth
-    val db = FirebaseFirestore.getInstance()
-    var id =user.uid
-    var name = user.displayName?:""
-    var email = user.email?:""
-    var photo = user.photoUrl?:""
-    var bio=""
-    var username=""
-    var github_Username=""*/
+
 
 
 

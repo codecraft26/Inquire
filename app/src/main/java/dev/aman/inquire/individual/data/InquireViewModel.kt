@@ -1,6 +1,5 @@
 package dev.aman.inquire.individual.data
 
-import android.net.Uri
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,8 +13,8 @@ class InquireViewModel: ViewModel() {
     var description=""
     var inquire_code=""
     var language=""
-    var timestamp=""
-    var image_uri: Uri?=null
+
+    var image_uri:String=""
     var state: InquireState =InquireState.UnBookmarked
     var upvotes=0
 
@@ -24,21 +23,27 @@ class InquireViewModel: ViewModel() {
     private val auth = Firebase.auth
     val currentUserId = auth.currentUser!!.uid
     val user = UserViewModel().getUserById(currentUserId)
-    val currentTime = System.currentTimeMillis().toString()
-    val time= currentTime
+    val currentTime = System.currentTimeMillis()
 
 
 
 
     fun publishInquire(){
-        val inquire= Inquire(title,description,inquire_code,language,image_uri,state,upvotes,)
+        val inquire= Inquire(
+            title,
+            description,
+            inquire_code,
+            language,
+            image_uri,
+            state,
+            upvotes)
         inquireCollections.document().set(inquire)
     }
     fun imageUpload(){
         val storage = FirebaseStorage.getInstance()
         val storageRef = storage.reference
         val imageRef = storageRef.child("images/${currentUserId}/${currentTime}")
-        imageRef.putFile(image_uri!!)
+
     }
 
 
