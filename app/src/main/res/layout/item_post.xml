@@ -131,10 +131,42 @@
             app:sparkbutton_primaryColor="@color/pink"
             app:sparkbutton_secondaryColor="@color/black" />
 
+        <ImageView
+            android:id="@+id/comment_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/like_button"
+            app:layout_constraintTop_toBottomOf="@+id/inquire_image"
+            app:srcCompat="@drawable/ic_baseline_comment_24" />
 
-
-
-
+        <com.varunest.sparkbutton.SparkButton
+            android:id="@+id/bookmarked_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="268dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inquire_image"
+            app:layout_constraintVertical_bias="1.0"
+            app:sparkbutton_activeImage="@drawable/active_bookmrked"
+            android:clickable="true"
+            app:sparkbutton_iconSize="40dp"
+            app:sparkbutton_inActiveImage="@drawable/ic_baseline_bookmark_24"
+            app:sparkbutton_primaryColor="@color/pink"
+            app:sparkbutton_secondaryColor="@color/black"
+            tools:ignore="DuplicateIds"
+            android:focusable="true" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
