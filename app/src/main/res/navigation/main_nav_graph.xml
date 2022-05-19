@@ -14,14 +14,7 @@
         android:id="@+id/createFragment"
         android:name="dev.aman.inquire.individual.ui.create.CreateFragment"
         android:label="fragment_create"
-        tools:layout="@layout/fragment_create" >
-        <action
-            android:id="@+id/action_createFragment_to_feedsFragment"
-            app:destination="@id/feedsFragment" />
-        <action
-            android:id="@+id/action_createFragment_to_addCodeFragment"
-            app:destination="@id/addCodeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_create" />
     <fragment
         android:id="@+id/accountFragment"
         android:name="dev.aman.inquire.individual.ui.profile.AccountFragment"
@@ -36,20 +29,6 @@
         <action
             android:id="@+id/action_accountFragment_to_accountUpdateActivity"
             app:destination="@id/accountUpdateActivity" />
-    </fragment>
-    <fragment
-        android:id="@+id/feedsFragment"
-        android:name="dev.aman.inquire.individual.ui.home.feeds.FeedsFragment"
-        android:label="fragment_feeds"
-        tools:layout="@layout/fragment_feeds" />
-    <fragment
-        android:id="@+id/addCodeFragment"
-        android:name="dev.aman.inquire.individual.ui.create.form.AddCodeFragment"
-        android:label="fragment_add_code"
-        tools:layout="@layout/fragment_add_code" >
-        <action
-            android:id="@+id/action_addCodeFragment_to_feedsFragment"
-            app:destination="@id/feedsFragment" />
     </fragment>
     <activity
         android:id="@+id/individualLoginActivity"

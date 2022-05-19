@@ -42,7 +42,7 @@ class AddImageFragment : Fragment() {
             if (resultCode == Activity.RESULT_OK) {
                 val imageUri = data?.data!!
 
-                model.imageUpload()
+               /* model.imageUpload()*/
 
                 binding.imageViewResult.setImageURI(imageUri)
                 Toast.makeText(context, "Image Selected", Toast.LENGTH_SHORT).show()

@@ -9,18 +9,23 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResultListener
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.google.modernstorage.permissions.RequestAccess
 import com.google.modernstorage.permissions.StoragePermissions
 import com.google.modernstorage.storage.AndroidFileSystem
 import com.google.modernstorage.storage.toOkioPath
+import dev.aman.inquire.R
 import dev.aman.inquire.databinding.FragmentAddCodeBinding
 import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.InputCodeDialogFragment
 import dev.aman.inquire.utils.Constants
+import nl.dionsegijn.konfetti.core.Party
+import nl.dionsegijn.konfetti.core.emitter.Emitter
 
 
 import okio.buffer
+import java.util.concurrent.TimeUnit
 
 
 class AddCodeFragment : Fragment() {
@@ -93,7 +98,23 @@ private lateinit var binding:FragmentAddCodeBinding
             )
         }
        binding.publishButton.setOnClickListener {
-        model.publishInquire()
+           if(model.inquire_code.isNotEmpty()) {
+
+
+               model.publishInquire()
+                binding.konfetti.start(
+                    Party(
+                        emitter = Emitter(duration = 3, TimeUnit.SECONDS).perSecond(
+                            30
+                        )
+                    )
+                )
+               findNavController().popBackStack()
+
+
+           }
+
+
        }
        }
 
