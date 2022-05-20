@@ -18,7 +18,7 @@
         <entry key="app/src/main/res/layout/activity_choosing.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_individual_main.xml" value="0.30520833333333336" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.14" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_navside.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.12" />
@@ -58,9 +58,6 @@
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.154" />
       </map>
     </option>
-  </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/src/main/res/navigation/side_nav.xml" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

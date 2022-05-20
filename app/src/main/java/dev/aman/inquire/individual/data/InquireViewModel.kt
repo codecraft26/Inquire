@@ -1,9 +1,12 @@
 package dev.aman.inquire.individual.data
 
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import dev.aman.inquire.individual.data.model.Inquire
 import dev.aman.inquire.utils.InquireState
 
@@ -14,9 +17,9 @@ class InquireViewModel: ViewModel() {
     var inquire_code=""
     var language=""
 
-    var image_uri:String=""
+     private var imageUri:String=""
     var state: InquireState =InquireState.UnBookmarked
-    var upvotes=0
+    var upVotes=0
 
     private val db = FirebaseFirestore.getInstance()
     val inquireCollections = db.collection("posts")
@@ -24,7 +27,7 @@ class InquireViewModel: ViewModel() {
     val currentUserId = auth.currentUser!!.uid
 
     val currentTime = System.currentTimeMillis()
-
+    val storageReference:StorageReference=FirebaseStorage.getInstance().reference
 
 
 
@@ -36,9 +39,9 @@ class InquireViewModel: ViewModel() {
             inquire_code,
             language,
             currentUserId,
-            image_uri,
+            imageUri,
             state,
-            upvotes)
+            upVotes)
         inquireCollections.document().set(inquire)
     }
 

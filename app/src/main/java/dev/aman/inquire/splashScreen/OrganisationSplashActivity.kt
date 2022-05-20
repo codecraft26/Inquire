@@ -22,5 +22,6 @@ class OrganisationSplashActivity : AppCompatActivity() {
             finish()
         }, 6000)
 
+
     }
 }
