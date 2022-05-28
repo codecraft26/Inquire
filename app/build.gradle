@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
     id 'kotlin-kapt'
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -91,6 +92,8 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
     implementation "android.arch.lifecycle:runtime:1.1.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+
+
 
 
 

@@ -15,6 +15,7 @@ import dev.aman.inquire.databinding.FragmentAccountBinding
 import dev.aman.inquire.individual.IndividualMainActivity
 import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.data.model.User
+import dev.aman.inquire.individual.ui.login.IndividualLoginActivity
 
 
 class AccountFragment : Fragment() {
@@ -26,6 +27,7 @@ class AccountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         binding = FragmentAccountBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -43,11 +45,7 @@ class AccountFragment : Fragment() {
                     binding.textViewUserName.text = model.name
                         binding.textViewUserEmail.text = model.email
                     binding.githubLink.text = model.github_Username
-                    binding.githubLink.setOnClickListener {
-                        val openURL = Intent(android.content.Intent.ACTION_VIEW)
-                        openURL.data = Uri.parse("https://www.github.com/${model.github_Username}")
-                        startActivity(openURL)
-                    }
+
 
                 }
 
@@ -58,16 +56,16 @@ class AccountFragment : Fragment() {
         model.getData()
         binding.logoutButton.setOnClickListener {
             model.logout()
-            /*findNavController().navigate(R.id.action_accountFragment_to_individualLoginActivity)*/
+            val intent = Intent(context, IndividualLoginActivity::class.java)
+            startActivity(intent)
+               (activity as IndividualMainActivity).finish()
 
-
-        }
-
-
-        binding.floatingActionButton2.setOnClickListener {
 
 
         }
+
+
+
 
     }
 }

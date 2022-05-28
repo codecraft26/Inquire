@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResultListener
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.google.modernstorage.permissions.RequestAccess
 import com.google.modernstorage.permissions.StoragePermissions
@@ -17,6 +18,8 @@ import dev.aman.inquire.databinding.FragmentAddCodeBinding
 import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.InputCodeDialogFragment
 import dev.aman.inquire.utils.Constants
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import nl.dionsegijn.konfetti.core.Party
 import nl.dionsegijn.konfetti.core.emitter.Emitter
 
@@ -106,7 +109,10 @@ private lateinit var binding:FragmentAddCodeBinding
                         )
                     )
                 )
-               findNavController().popBackStack()
+               lifecycleScope.launch {
+                   delay(3000)
+                   findNavController().popBackStack()
+               }
 
 
            }

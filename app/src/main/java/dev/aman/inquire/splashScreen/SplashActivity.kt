@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.os.Handler
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import dev.aman.inquire.ChoosingActivity
 import dev.aman.inquire.databinding.ActivitySplashBinding
 import dev.aman.inquire.individual.IndividualMainActivity
+import dev.aman.inquire.individual.ui.login.IndividualLoginActivity
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -28,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
             }, 2000)
         }
         else{
-            val mIntent = Intent(this@SplashActivity, ChoosingActivity::class.java)
+            val mIntent = Intent(this@SplashActivity,IndividualLoginActivity::class.java)
             startActivity(mIntent)
             finish()
         }

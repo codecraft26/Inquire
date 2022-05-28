@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="dev.aman.inquire.individual.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_bottomDescriptionFragment"
+            app:destination="@id/bottomDescriptionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createFragment"
         android:name="dev.aman.inquire.individual.ui.create.CreateFragment"
@@ -19,27 +23,19 @@
         android:id="@+id/accountFragment"
         android:name="dev.aman.inquire.individual.ui.profile.AccountFragment"
         android:label="fragment_bookmarked"
-        tools:layout="@layout/fragment_bookmarked" >
-        <action
-            android:id="@+id/action_accountFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_accountFragment_to_individualLoginActivity"
-            app:destination="@id/individualLoginActivity" />
-        <action
-            android:id="@+id/action_accountFragment_to_accountUpdateActivity"
-            app:destination="@id/accountUpdateActivity" />
+        tools:layout="@layout/fragment_bookmarked" />
+    <fragment
+        android:id="@+id/bottomDescriptionFragment"
+        android:name="dev.aman.inquire.individual.ui.home.feeds.BottomDescriptionFragment"
+        android:label="fragment_bottom_description"
+        tools:layout="@layout/fragment_bottom_description" >
+        <argument
+            android:name="inquireId"
+            app:argType="string"
+
+            />
     </fragment>
-    <activity
-        android:id="@+id/individualLoginActivity"
-        android:name="dev.aman.inquire.individual.ui.login.IndividualLoginActivity"
-        android:label="activity_login_individual"
-        tools:layout="@layout/activity_login_individual" />
-    <activity
-        android:id="@+id/accountUpdateActivity"
-        android:name="dev.aman.inquire.individual.ui.profile.AccountUpdateActivity"
-        android:label="activity_account_update"
-        tools:layout="@layout/activity_account_update" />
+
 
 
 </navigation>

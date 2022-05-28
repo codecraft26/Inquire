@@ -9,16 +9,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.fragment.app.activityViewModels
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.github.dhaval2404.imagepicker.ImagePicker.Companion.REQUEST_CODE
+import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.UploadTask
 import dev.aman.inquire.databinding.FragmentAddImageBinding
 import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.CreateFragment
+import java.util.*
 
 
 class AddImageFragment : Fragment() {
     private lateinit var binding: FragmentAddImageBinding
+    val fileName = UUID.randomUUID().toString() +".jpg"
+    val refStorage = FirebaseStorage.getInstance().reference.child("images/$fileName")
+
     private val model by activityViewModels<InquireViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,13 +46,15 @@ class AddImageFragment : Fragment() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             val resultCode = result.resultCode
             val data = result.data
-
+            var ImageUri=data?.data
             if (resultCode == Activity.RESULT_OK) {
-                val imageUri = data?.data!!
+                model.imageUri = data?.data.toString()
+                var ImageUri=data?.data
 
-               /* model.imageUpload()*/
 
-                binding.imageViewResult.setImageURI(imageUri)
+
+
+                binding.imageViewResult.setImageURI(ImageUri)
                 Toast.makeText(context, "Image Selected", Toast.LENGTH_SHORT).show()
                 if (resultCode == Activity.RESULT_CANCELED) {
                     // User cancelled the image capture

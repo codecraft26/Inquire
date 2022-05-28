@@ -6,6 +6,7 @@ import com.google.firebase.firestore.DocumentSnapshot
 import dev.aman.inquire.utils.InquireState
 
 data class Inquire(
+    var id:Int = 0,
     var title: String = "",
     val description: String = "",
     val inquire_code: String = "",
