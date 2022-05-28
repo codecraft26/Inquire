@@ -20,9 +20,9 @@ object Repository {
         var name = ""
         var photoUrl = ""
         var email = ""
-        var bio = ""
-        var username = ""
-        var githubUsername = ""
+        val bio = ""
+        val username = ""
+        val githubUsername = ""
         Firebase.auth.currentUser?.let {
             id = it.uid
             name = it.displayName ?: ""
@@ -30,7 +30,7 @@ object Repository {
             email = it.email ?: ""
         }
 
-        val user = User(id,username,name,photoUrl,email,bio,githubUsername)
+        val user = User(username, name, photoUrl, email, bio, githubUsername)
         Firebase
             .firestore
             .collection("users")

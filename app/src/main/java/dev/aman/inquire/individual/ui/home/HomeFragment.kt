@@ -29,9 +29,10 @@ class HomeFragment : Fragment() {
         TabLayoutMediator(binding.tabLayout, binding.viewpager2TasksFragments) { tab, position ->
             tab.text = when (position) {
                 0 -> "Feeds"
-                1 -> "Article"
-                2->"Bookmarked"
-                else -> "NA"
+
+                1->"Bookmarked"
+
+                else -> "Others"
             }
         }.attach()
     }

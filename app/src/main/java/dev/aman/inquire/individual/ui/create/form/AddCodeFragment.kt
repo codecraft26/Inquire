@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResultListener
-import com.google.android.material.snackbar.Snackbar
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.google.modernstorage.permissions.RequestAccess
 import com.google.modernstorage.permissions.StoragePermissions
 import com.google.modernstorage.storage.AndroidFileSystem
@@ -18,9 +18,14 @@ import dev.aman.inquire.databinding.FragmentAddCodeBinding
 import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.InputCodeDialogFragment
 import dev.aman.inquire.utils.Constants
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import nl.dionsegijn.konfetti.core.Party
+import nl.dionsegijn.konfetti.core.emitter.Emitter
 
 
 import okio.buffer
+import java.util.concurrent.TimeUnit
 
 
 class AddCodeFragment : Fragment() {
@@ -93,7 +98,26 @@ private lateinit var binding:FragmentAddCodeBinding
             )
         }
        binding.publishButton.setOnClickListener {
-        model.publishInquire()
+           if(model.inquire_code.isNotEmpty()) {
+
+
+               model.publishInquire()
+                binding.konfetti.start(
+                    Party(
+                        emitter = Emitter(duration = 3, TimeUnit.SECONDS).perSecond(
+                            30
+                        )
+                    )
+                )
+               lifecycleScope.launch {
+                   delay(3000)
+                   findNavController().popBackStack()
+               }
+
+
+           }
+
+
        }
        }
 
