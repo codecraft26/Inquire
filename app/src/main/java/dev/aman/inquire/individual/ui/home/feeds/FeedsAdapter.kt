@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import dev.aman.inquire.R
 import dev.aman.inquire.databinding.ItemPostBinding
 import dev.aman.inquire.individual.data.model.Inquire
 import dev.aman.inquire.individual.ui.home.HomeFragment
+import dev.aman.inquire.individual.ui.home.HomeFragmentDirections
 import dev.aman.inquire.utils.Utils
 
 class FeedsAdapter(private val inquireList:ArrayList<Inquire>):RecyclerView.Adapter<FeedsAdapter.FeedsViewHolder>() {
@@ -24,6 +26,11 @@ class FeedsAdapter(private val inquireList:ArrayList<Inquire>):RecyclerView.Adap
 
                }
                root.setOnClickListener{
+                   val action=HomeFragmentDirections.actionHomeFragmentToBottomDescriptionFragment(
+                       inquire.id.toString()
+
+                   )
+                   it.findNavController().navigate(action)
 
 
 
