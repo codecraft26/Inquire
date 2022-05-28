@@ -32,12 +32,12 @@ class BottomDescriptionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val args by navArgs<BottomDescriptionFragmentArgs>()
         super.onViewCreated(view, savedInstanceState)
-        setUpinquire(inquire = Inquire())
+
     }
 
     private fun setUpinquire(inquire: Inquire) {
         with(binding){
-            textView2.text=inquire.title
+
         }
 
     }
