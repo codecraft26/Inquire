@@ -27,7 +27,7 @@ class FeedsAdapter(private val inquireList:ArrayList<Inquire>):RecyclerView.Adap
                }
                root.setOnClickListener{
                    val action= HomeFragmentDirections.actionHomeFragmentToFeedsDescriptionFragment(
-                       inquire.id.toString()
+                       inquire.id
                    )
                    it.findNavController().navigate(action)
 

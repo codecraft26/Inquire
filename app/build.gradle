@@ -84,7 +84,7 @@ dependencies {
         implementation 'com.github.varunest:sparkbutton:1.0.6'
     implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
     //firbase storage
-    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.1'
 
     implementation 'com.firebaseui:firebase-ui-firestore:7.2.0'
     //glide

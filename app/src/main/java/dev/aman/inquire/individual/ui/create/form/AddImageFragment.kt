@@ -2,6 +2,7 @@ package dev.aman.inquire.individual.ui.create.form
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Build.VERSION_CODES.P
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,8 +15,10 @@ import androidx.fragment.app.activityViewModels
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.github.dhaval2404.imagepicker.ImagePicker.Companion.REQUEST_CODE
 import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.UploadTask
+import com.google.firebase.storage.ktx.storage
 import dev.aman.inquire.databinding.FragmentAddImageBinding
 import dev.aman.inquire.individual.data.InquireViewModel
 import dev.aman.inquire.individual.ui.create.CreateFragment
@@ -25,7 +28,7 @@ import java.util.*
 class AddImageFragment : Fragment() {
     private lateinit var binding: FragmentAddImageBinding
     val fileName = UUID.randomUUID().toString() +".jpg"
-    val refStorage = FirebaseStorage.getInstance().reference.child("images/$fileName")
+    val refStorage = Firebase.storage.reference.child("images/$fileName")
 
     private val model by activityViewModels<InquireViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,10 +52,26 @@ class AddImageFragment : Fragment() {
             var ImageUri=data?.data
             if (resultCode == Activity.RESULT_OK) {
                 model.imageUri = data?.data.toString()
-                var ImageUri=data?.data
+                val ImageUri=data?.data
 
-
-
+                val uploadTask = refStorage.putFile(ImageUri!!)
+                try {
+                    val url = uploadTask.continueWithTask { task ->
+                        if (!task.isSuccessful) {
+                            task.exception?.let {
+                                throw it
+                            }
+                        }
+                        refStorage.downloadUrl
+                    }.addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            val publicDownloadUrl = it.result
+                            // Here we have the URL
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
 
                 binding.imageViewResult.setImageURI(ImageUri)
                 Toast.makeText(context, "Image Selected", Toast.LENGTH_SHORT).show()
