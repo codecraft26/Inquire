@@ -11,8 +11,8 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_bottomDescriptionFragment"
-            app:destination="@id/bottomDescriptionFragment" />
+            android:id="@+id/action_homeFragment_to_feedsDescriptionFragment"
+            app:destination="@id/feedsDescriptionFragment" />
     </fragment>
     <fragment
         android:id="@+id/createFragment"
@@ -25,10 +25,10 @@
         android:label="fragment_bookmarked"
         tools:layout="@layout/fragment_bookmarked" />
     <fragment
-        android:id="@+id/bottomDescriptionFragment"
-        android:name="dev.aman.inquire.individual.ui.home.feeds.BottomDescriptionFragment"
+        android:id="@+id/feedsDescriptionFragment"
+        android:name="dev.aman.inquire.individual.ui.home.description.FeedsDescriptionFragment"
         android:label="fragment_bottom_description"
-        tools:layout="@layout/fragment_bottom_description" >
+        tools:layout="@layout/fragment_feeds_description" >
         <argument
             android:name="inquireId"
             app:argType="string"

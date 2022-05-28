@@ -1,4 +1,4 @@
-package dev.aman.inquire.individual.ui.home.feeds
+package dev.aman.inquire.individual.ui.home.description
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
