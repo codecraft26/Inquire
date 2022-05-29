@@ -31,7 +31,7 @@
         tools:layout="@layout/fragment_feeds_description" >
         <argument
             android:name="inquireId"
-            app:argType="integer"
+            app:argType="string"
             />
 
     </dialog>

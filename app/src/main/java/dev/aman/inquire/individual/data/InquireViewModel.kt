@@ -2,18 +2,14 @@ package dev.aman.inquire.individual.data
 
 import android.net.Uri
 import androidx.lifecycle.ViewModel
-import com.google.android.gms.tasks.OnFailureListener
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.ktx.auth
+
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.UploadTask
+
 import dev.aman.inquire.individual.data.model.Inquire
 import dev.aman.inquire.utils.InquireState
-import java.util.*
-import java.util.UUID.randomUUID
 
 class InquireViewModel: ViewModel() {
 
@@ -40,7 +36,7 @@ class InquireViewModel: ViewModel() {
 
     fun publishInquire(){
         val inquire= Inquire(
-            id,
+            id="",
             title,
             description,
             inquire_code,
@@ -52,7 +48,13 @@ class InquireViewModel: ViewModel() {
             createdAt,
             userImage
         )
-        inquireCollections.document().set(inquire)
+        inquireCollections.add(inquire)
+            .addOnSuccessListener {
+                println("Inquire added")
+            }
+            .addOnFailureListener {
+                println("Inquire not added")
+            }
     }
 
 

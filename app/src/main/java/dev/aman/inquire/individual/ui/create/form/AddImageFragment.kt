@@ -47,9 +47,9 @@ class AddImageFragment : Fragment() {
             val data = result.data
             if (resultCode == Activity.RESULT_OK) {
 
-                val ImageUri=data?.data
+                val imageUri=data?.data
 
-                val uploadTask = refStorage.putFile(ImageUri!!)
+                val uploadTask = refStorage.putFile(imageUri!!)
                 try {
                     val url = uploadTask.continueWithTask { task ->
                         if (!task.isSuccessful) {
@@ -70,7 +70,7 @@ class AddImageFragment : Fragment() {
                     e.printStackTrace()
                 }
 
-                binding.imageViewResult.setImageURI(ImageUri)
+                binding.imageViewResult.setImageURI(imageUri)
                 Toast.makeText(context, "Image Selected", Toast.LENGTH_SHORT).show()
                 if (resultCode == Activity.RESULT_CANCELED) {
                     // User cancelled the image capture

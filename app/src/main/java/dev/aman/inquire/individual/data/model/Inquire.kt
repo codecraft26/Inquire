@@ -11,7 +11,7 @@ import java.util.*
 
 @IgnoreExtraProperties
 data class Inquire(
-    @Exclude @get: Exclude var id:String?=null,
+    @Exclude @get: Exclude var id:String = "",
     var title: String = "",
     val description: String = "",
     val inquire_code: String = "",
