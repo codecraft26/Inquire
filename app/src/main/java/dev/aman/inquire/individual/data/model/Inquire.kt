@@ -1,12 +1,17 @@
 package dev.aman.inquire.individual.data.model
 
 
+import androidx.room.PrimaryKey
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.Exclude
+import com.google.firebase.firestore.IgnoreExtraProperties
 import dev.aman.inquire.utils.InquireState
+import java.util.*
 
+@IgnoreExtraProperties
 data class Inquire(
-    var id:Int = 0,
+    @Exclude @get: Exclude var id:String?=null,
     var title: String = "",
     val description: String = "",
     val inquire_code: String = "",
@@ -15,5 +20,7 @@ data class Inquire(
     val imageUri: String? = null,
     var status: InquireState = InquireState.UnBookmarked,
     var UpVotes: Int = 0,
+    var createdAt:Long=0L,
+    var userImage:String?=null
 
     )

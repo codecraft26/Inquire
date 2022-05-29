@@ -24,7 +24,7 @@
         android:name="dev.aman.inquire.individual.ui.profile.AccountFragment"
         android:label="fragment_bookmarked"
         tools:layout="@layout/fragment_bookmarked" />
-    <fragment
+    <dialog
         android:id="@+id/feedsDescriptionFragment"
         android:name="dev.aman.inquire.individual.ui.home.description.FeedsDescriptionFragment"
         android:label="fragment_bottom_description"
@@ -32,9 +32,9 @@
         <argument
             android:name="inquireId"
             app:argType="integer"
-
             />
-    </fragment>
+
+    </dialog>
 
 
 

@@ -2,7 +2,6 @@ package dev.aman.inquire.individual.data
 
 import android.net.Uri
 import androidx.lifecycle.ViewModel
-import com.google.android.gms.auth.api.signin.internal.Storage
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.ktx.auth
@@ -23,20 +22,20 @@ class InquireViewModel: ViewModel() {
     var inquire_code=""
     var language=""
     val fileName = "title" +".jpg"
-
-     var imageUri:String=""
+    var imageUri:String=""
     var state: InquireState =InquireState.UnBookmarked
     var upVotes=0
-    var id =(0..5000).random()
     private val db = FirebaseFirestore.getInstance()
+
     val inquireCollections = db.collection("posts")
     private val auth = Firebase.auth
-    val currentUserId = auth.currentUser!!.uid
+    val createdBy=auth.currentUser?.displayName.toString()
 
     val currentTime = System.currentTimeMillis()
     val refStorage = FirebaseStorage.getInstance().reference.child("images/$fileName")
 
-
+    val createdAt=System.currentTimeMillis()
+    val userImage=auth.currentUser?.photoUrl.toString()
 
 
     fun publishInquire(){
@@ -46,37 +45,24 @@ class InquireViewModel: ViewModel() {
             description,
             inquire_code,
             language,
-            currentUserId,
+            createdBy,
             imageUri,
             state,
-            upVotes)
+            upVotes,
+            createdAt,
+            userImage
+        )
         inquireCollections.document().set(inquire)
     }
-    fun uploadImage(uri: Uri){
-        val fileName = "title" +".jpg"
-        refStorage.putFile(uri).addOnSuccessListener {
-
-            OnSuccessListener<UploadTask.TaskSnapshot>
-            {
-                refStorage.downloadUrl.addOnSuccessListener {
-                    imageUri = it.toString()
-
-                }
-                    .addOnFailureListener(OnFailureListener { e ->
-                        print(e.message)
-                    })
-
-            }
 
 
 
-
-
-        }
-
-
-
-        }
 
 
 }
+
+
+
+
+
+

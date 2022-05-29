@@ -10,14 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.fragment.app.activityViewModels
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.github.dhaval2404.imagepicker.ImagePicker.Companion.REQUEST_CODE
-import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.UploadTask
 import com.google.firebase.storage.ktx.storage
 import dev.aman.inquire.databinding.FragmentAddImageBinding
 import dev.aman.inquire.individual.data.InquireViewModel
@@ -49,9 +45,8 @@ class AddImageFragment : Fragment() {
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             val resultCode = result.resultCode
             val data = result.data
-            var ImageUri=data?.data
             if (resultCode == Activity.RESULT_OK) {
-                model.imageUri = data?.data.toString()
+
                 val ImageUri=data?.data
 
                 val uploadTask = refStorage.putFile(ImageUri!!)
@@ -67,6 +62,8 @@ class AddImageFragment : Fragment() {
                         if (it.isSuccessful) {
                             val publicDownloadUrl = it.result
                             // Here we have the URL
+                            model.imageUri= publicDownloadUrl.toString()
+
                         }
                     }
                 } catch (e: Exception) {

@@ -168,6 +168,18 @@
             tools:ignore="DuplicateIds"
             android:focusable="true" />
 
+        <com.google.android.material.chip.Chip
+            android:id="@+id/language_chip"
+            android:layout_width="113dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="86dp"
+            android:layout_marginTop="17dp"
+            android:text="Kotlin"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_name"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
