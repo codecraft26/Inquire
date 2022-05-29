@@ -36,7 +36,7 @@ class FeedsAdapter(private val inquireList:ArrayList<Inquire>):RecyclerView.Adap
                 }
 
                inquireImage.load(inquire.imageUri){
-                   error(R.drawable.ic_launcher_background)
+                   error(R.drawable.usericon)
                    crossfade(true)
                    transformations(RoundedCornersTransformation(20f))
                }

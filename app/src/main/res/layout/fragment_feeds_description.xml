@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView_snippet_output_image"
+            android:id="@+id/imageView_inquire"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginStart="8dp"
@@ -37,7 +37,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView_snippet_output_image" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView_inquire" />
 
         <TextView
             android:id="@+id/textView_snippet_description"

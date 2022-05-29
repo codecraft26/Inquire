@@ -185,6 +185,7 @@
             android:focusable="true" />
 
         <Button
+            android:background="#FF0303"
             android:id="@+id/logout_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

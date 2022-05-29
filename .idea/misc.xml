@@ -11,6 +11,8 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.154" />
         <entry key="app/src/main/res/drawable/inactive_logo.xml" value="0.1315" />
+        <entry key="app/src/main/res/drawable/logoutbtn.xml" value="0.108" />
+        <entry key="app/src/main/res/drawable/passwordfieldcon.xml" value="0.108" />
         <entry key="app/src/main/res/drawable/usericon.xml" value="0.154" />
         <entry key="app/src/main/res/layout/activity_account_update.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.15260416666666668" />

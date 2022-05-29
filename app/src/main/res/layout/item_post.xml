@@ -10,7 +10,7 @@
     android:focusable="true"
     android:checkable="true"
     style="?attr/materialCardViewFilledStyle"
-    app:cardBackgroundColor="#CA8C8C"
+    app:cardBackgroundColor="#726E6E"
     android:elevation="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

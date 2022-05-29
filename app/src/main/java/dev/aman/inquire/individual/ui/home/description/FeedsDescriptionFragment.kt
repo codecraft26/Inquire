@@ -64,12 +64,8 @@ class FeedsDescriptionFragment : BottomSheetDialogFragment() {
                         binding.textViewSnippetTitle.text=documentChange.value.toString()
                     }
                     if (documentChange.key == "image") {
-                        if(documentChange.value.toString()!=""){
-                            binding.imageViewSnippetOutputImage.visibility=View.INVISIBLE
-                        }
-
-
-                        Glide.with(this).load(documentChange.value.toString()).into(binding.imageViewSnippetOutputImage)
+                        var image = documentChange.value.toString()
+                        Glide.with(this).load(image).into(binding.imageViewInquire)
 
 
                     }
