@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import com.facebook.appevents.codeless.internal.ViewHierarchy.setOnClickListener
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -22,7 +23,7 @@ class IndividualLoginActivity : AppCompatActivity() {
         binding= ActivityLoginIndividualBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.signInButton.setOnClickListener{
+        binding.cardViewLoginWithGoogle.setOnClickListener{
 
             signInLauncher.launch(signInIntent)
         }

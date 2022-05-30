@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_feedsDescriptionFragment"
             app:destination="@id/feedsDescriptionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/createFragment"
@@ -33,9 +36,17 @@
             android:name="inquireId"
             app:argType="string"
             />
+        <action
+            android:id="@+id/action_feedsDescriptionFragment_to_expandedImageActivity2"
+            app:destination="@id/expandedImageActivity2" />
+
 
     </dialog>
-
+    <activity
+        android:id="@+id/expandedImageActivity2"
+        android:name="dev.aman.inquire.individual.ui.home.description.ExpandedImageActivity"
+        android:label="activity_expanded_image"
+        tools:layout="@layout/activity_expanded_image" />
 
 
 </navigation>

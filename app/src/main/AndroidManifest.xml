@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Inquire">
         <activity
+            android:name=".ExpandedImageActivity"
+            android:exported="false" />
+        <activity
             android:name=".individual.ui.profile.AccountUpdateActivity"
             android:exported="false" />
         <activity
@@ -19,7 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".individual.IndividualMainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ChoosingActivity"
             android:exported="false" />

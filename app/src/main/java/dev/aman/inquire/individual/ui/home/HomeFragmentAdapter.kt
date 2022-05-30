@@ -6,7 +6,7 @@ import dev.aman.inquire.individual.ui.home.bookmarked.BookMarkedFragment
 import dev.aman.inquire.individual.ui.home.feeds.FeedsFragment
 
 class HomeFragmentAdapter(fragment: Fragment): FragmentStateAdapter(fragment){
-    override fun getItemCount() = 2
+    override fun getItemCount() = 1
     override fun createFragment(position: Int): Fragment {
         return when (position) {
             0 -> FeedsFragment()

@@ -7,25 +7,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
+
+import coil.load
+import coil.transform.RoundedCornersTransformation
+
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.firebase.firestore.DocumentChange
 import com.google.firebase.firestore.ktx.firestore
+
 import com.google.firebase.ktx.Firebase
 import dev.aman.inquire.R
+
 import dev.aman.inquire.databinding.FragmentFeedsDescriptionBinding
-import dev.aman.inquire.individual.data.InquireViewModel
-import dev.aman.inquire.individual.data.model.Inquire
 import io.github.kbiakov.codeview.adapters.Options
 import io.github.kbiakov.codeview.highlight.ColorTheme
 
 class FeedsDescriptionFragment : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentFeedsDescriptionBinding
-    private val model by activityViewModels<DescriptionViewModel>()
+     lateinit var imageUri:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -52,41 +55,36 @@ class FeedsDescriptionFragment : BottomSheetDialogFragment() {
         val args: FeedsDescriptionFragmentArgs by navArgs()
         var id = args.inquireId
         Firebase.firestore.collection("posts").document(id).get().addOnSuccessListener {
+
             Log.d("TAG", it.data.toString())
             if (it.data != null) {
                 Log.d("Firestore", it.data.toString())
-                for (documentChange in it.data!!.entries) {
-                    Log.d("TAG", documentChange.value.toString())
-                    if (documentChange.key == "description") {
-                        binding.textViewSnippetDescription.text = documentChange.value.toString()
-                    }
-                    if (documentChange.key == "title") {
-                        binding.textViewSnippetTitle.text=documentChange.value.toString()
-                    }
-                    if (documentChange.key == "image") {
-                        var image = documentChange.value.toString()
-                        Glide.with(this).load(image).into(binding.imageViewInquire)
+                binding.textViewSnippetDescription.text = it.data!!["description"].toString()
+                binding.textViewSnippetTitle.text = it.data!!["title"].toString()
+                binding.languageChip.text = it.data!!["language"].toString()
+                imageUri=it.data!!["image"].toString()
+                binding.imageViewInquire.load(it.data!!["imageUri"].toString()){
+                    error(R.mipmap.ic_launcher)
+                    crossfade(true)
+                    transformations(RoundedCornersTransformation(20f))
 
-
-                    }
-                    if(documentChange.key=="inquire_code"){
-                        var  code=documentChange.value.toString()
-                        binding.codeViewSnippetCode.apply {
-                            setOptions(Options.Default.get(requireContext()).withTheme(ColorTheme.MONOKAI))
-                            setCode(code ?: "An error occurred while loading the code!")
-                        }
-                        if(documentChange.key=="language"){
-                            binding.languageChip.text=documentChange.value.toString()
-                        }
-
-                    }
-                }
-                binding.buttonCopyCode.setOnClickListener {
 
                 }
+
+                binding.codeViewSnippetCode.apply{
+                    val code =it.data!!["inquire_code"].toString()
+                    setOptions(Options.Default.get(requireContext()).withTheme(ColorTheme.MONOKAI))
+                    setCode(code ?: "An error occurred while loading the code!")
+                }
+             binding.buttonCopyCode.setOnClickListener{
+
+
+             }
+
 
 
             }
+
 
         }
 

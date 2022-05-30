@@ -18,9 +18,10 @@
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.1375" />
         <entry key="app/src/main/res/layout/activity_choosing.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_individual_main.xml" value="0.30520833333333336" />
+        <entry key="app/src/main/res/layout/activity_expanded_image.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/activity_individual_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.14" />
+        <entry key="app/src/main/res/layout/activity_login_individual.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_navside.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.12" />
@@ -44,8 +45,9 @@
         <entry key="app/src/main/res/layout/fragment_bottom_description.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_create.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.15260416666666668" />
+        <entry key="app/src/main/res/layout/fragment_expanded_image.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_feeds.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_feeds_description.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_feeds_description.xml" value="0.14" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_input_code_dialog.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/fragment_my_draft.xml" value="0.15260416666666668" />
