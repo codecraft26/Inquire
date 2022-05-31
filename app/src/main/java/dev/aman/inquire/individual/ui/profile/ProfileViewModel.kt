@@ -29,7 +29,7 @@ class ProfileViewModel:ViewModel() {
     var photo = user.photoUrl ?: ""
     var bio:String? = ""
     var username:String? = ""
-    var github_Username:String? = ""
+    var github_Username:String= ""
 
 
     fun getData() {

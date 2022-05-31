@@ -10,13 +10,13 @@
     android:focusable="true"
     android:checkable="true"
     style="?attr/materialCardViewFilledStyle"
-    app:cardBackgroundColor="#CA8C8C"
+    app:cardBackgroundColor="#372F2F"
     android:elevation="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="487dp">
+        android:layout_height="445dp">
 
 
         <ImageView
@@ -24,44 +24,44 @@
             android:layout_width="43dp"
             android:layout_height="42dp"
             android:layout_marginStart="16dp"
-            android:clickable="true"
             android:layout_marginTop="16dp"
-            android:longClickable="true"
+            android:clickable="true"
             android:contentDescription="TODO"
+            android:focusable="true"
+            android:longClickable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/usericon"
-            android:focusable="true" />
+            app:srcCompat="@drawable/usericon" />
 
         <TextView
 
             android:id="@+id/user_name"
-            android:clickable="true"
-            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="219dp"
+            android:clickable="true"
+            android:focusable="true"
             android:fontFamily="@font/firasansregular"
             android:text="Aman gupta"
+            android:textColor="@color/black"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/time_stamp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            android:focusable="true" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/time_stamp"
             android:layout_width="wrap_content"
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="245dp"
             android:fontFamily="@font/firasansregular"
             android:text="20 Hours ago"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/inquire_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -70,14 +70,14 @@
 
         <TextView
             android:id="@+id/inquire_title"
-            android:textColor="@color/black"
-            android:layout_width="358dp"
-            android:layout_height="65dp"
+            android:layout_width="338dp"
+            android:layout_height="42dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="14dp"
             android:fontFamily="@font/firasansextrabold"
             android:text="How to add a new user through a firebase "
+            android:textColor="@color/black"
             android:textSize="25dp"
 
             android:textStyle="bold"
@@ -88,13 +88,13 @@
             app:layout_constraintTop_toBottomOf="@+id/time_stamp" />
 
         <ImageView
-            android:clickable="true"
             android:id="@+id/inquire_image"
             android:layout_width="354dp"
             android:layout_height="208dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="17dp"
             android:layout_marginEnd="9dp"
+            android:clickable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inquire_description"
@@ -102,13 +102,13 @@
 
         <TextView
             android:id="@+id/inquire_description"
-            android:textColor="@color/black"
             android:layout_width="339dp"
             android:layout_height="43dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="17dp"
             android:text="hey there  i am aman wlcome to inquire app that build on the app on the surfce how to buld some"
+            android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -133,16 +133,17 @@
 
         <ImageView
             android:id="@+id/comment_button"
-            android:clickable="true"
-            android:focusable="true"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="83dp"
+            android:layout_marginStart="104dp"
             android:layout_marginTop="23dp"
             android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/like_button"
             app:layout_constraintTop_toBottomOf="@+id/inquire_image"
+            app:layout_constraintVertical_bias="0.526"
             app:srcCompat="@drawable/ic_baseline_comment_24" />
 
         <com.varunest.sparkbutton.SparkButton
@@ -153,20 +154,32 @@
             android:layout_marginTop="23dp"
             android:layout_marginEnd="71dp"
             android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inquire_image"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.526"
             app:sparkbutton_activeImage="@drawable/ic_baseline_bookmark_added_24"
-            android:clickable="true"
             app:sparkbutton_iconSize="40dp"
             app:sparkbutton_inActiveImage="@drawable/ic_baseline_bookmark_24"
             app:sparkbutton_primaryColor="@color/pink"
             app:sparkbutton_secondaryColor="@color/black"
-            tools:ignore="DuplicateIds"
-            android:focusable="true" />
+            tools:ignore="DuplicateIds" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/language_chip"
+            android:layout_width="113dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="86dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="12dp"
+            android:text="Kotlin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/user_name"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

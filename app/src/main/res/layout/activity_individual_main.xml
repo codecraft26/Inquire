@@ -8,15 +8,14 @@
     tools:context=".individual.IndividualMainActivity">
 
 
-
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navView"
+        android:background="#3B3942"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="77dp"
         android:layout_gravity="bottom"
-        app:menu="@menu/bottom_nav_menu"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"/>
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:menu="@menu/bottom_nav_menu" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
@@ -26,8 +25,6 @@
         android:layout_marginBottom="0dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/main_nav_graph" />
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

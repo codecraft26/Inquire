@@ -52,6 +52,7 @@ class FeedsFragment : Fragment() {
             for(dc:DocumentChange in value!!.documentChanges){
                 if(dc.type== DocumentChange.Type.ADDED){
                     val inquire=dc.document.toObject(Inquire::class.java)
+                    inquire.id=dc.document.id
                     inquireList.add(inquire)
                     mAdapter.notifyDataSetChanged()
                 }
