@@ -7,7 +7,6 @@ Inquire is a code sharing and dicovery platform aimed at improving developer prd
 -   Fork this repo and run the `git clone <forked repo>` command from your terminal/bash
 -   gradle sync
 
-## Technologies Jargon
 
 ## Technical Jargon
 - Android SDK API 31
